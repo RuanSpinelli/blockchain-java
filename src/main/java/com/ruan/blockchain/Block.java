@@ -23,6 +23,7 @@ public class Block {
         String calculatedHash = StringUtil.applySha256(
                 this.previousHash +
                         Long.toString(this.timeStamp)+
+                        Integer.toString(nonce)+
                         data);
         return calculatedHash;
     }
